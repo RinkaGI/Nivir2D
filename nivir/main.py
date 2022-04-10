@@ -1,4 +1,5 @@
 import pygame, sys
+from nivir.input import Input
 
 class Nivir:
     def __init__(
@@ -22,6 +23,8 @@ class Nivir:
 
         self.clock = pygame.time.Clock()
 
+        self.input = Input()
+
         self.window.fill(self.bgcolor)
 
     def showObject(self, gameobject):
@@ -39,6 +42,8 @@ class Nivir:
                 self.running = False
                 pygame.quit()
                 sys.exit(0)
+
+        self.input.update()        
 
     def updateScreen(self, fps: int = 60):
         pygame.display.update()
