@@ -1,3 +1,5 @@
+#################### TESTING NIVIR MAKING A ENDLESS RUNNER 2D #################################
+
 from nivir import *
 
 screen =  Nivir('Runner', 800, 400)
